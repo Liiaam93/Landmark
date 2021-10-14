@@ -1,0 +1,17 @@
+#sel {
+  color: black;
+  text-align: center;
+}
+
+#note {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#res {
+  color: green;
+  font-size: xx-large;
+  font-weight: 700;
+  margin-top: 10%;
+  text-align: center;
+}
