@@ -30,6 +30,7 @@ let postage = () => {
       country === "Norway" ||
       country === "Russia" ||
       country === "Sweden" ||
+      country === "China" ||
       country === "Switzerland"
     ) {
       post = "MINI";
@@ -48,9 +49,9 @@ let postage = () => {
         post = "MAXI";
       }
     } else if (country === "Austria") {
-      if (weight < 2000) {
+      if (weight <= 2000) {
         post = "MINI - (WEBSITE ORDERS DDU)";
-      } else if (weight >= 2000) {
+      } else if (weight > 2000) {
         post = "MAXI - (WEBSITE ORDERS DDU)";
       }
     } else if (country === "Croatia") {
@@ -64,21 +65,21 @@ let postage = () => {
       country === "Malta" ||
       country === "Portugal"
     ) {
-      if (weight < 400) {
+      if (weight <= 400) {
         post = "MINI";
-      } else if (weight >= 400) {
+      } else if (weight > 400) {
         post = "MAXI";
       }
     } else if (country === "Czech Republic" || country === "USA") {
-      if (weight < 1400) {
+      if (weight <= 1400) {
         post = "MINI";
-      } else if (weight >= 1400) {
+      } else if (weight > 1400) {
         post = "MAXI";
       }
     } else if (country === "Denmark") {
-      if (weight < 950) {
+      if (weight <= 950) {
         post = "MINI";
-      } else if (weight >= 950) {
+      } else if (weight > 950) {
         post = "MAXI";
       }
     } else if (
@@ -86,15 +87,15 @@ let postage = () => {
       country === "Slovenia" ||
       country === "South Korea"
     ) {
-      if (weight < 600) {
+      if (weight <= 600) {
         post = "MINI";
-      } else if (weight >= 600) {
+      } else if (weight > 600) {
         post = "MAXI";
       }
     } else if (country === "Greece" || country === "Hong Kong") {
-      if (weight < 1600) {
+      if (weight <= 1600) {
         post = "MINI";
-      } else if (weight >= 1600) {
+      } else if (weight > 1600) {
         post = "MAXI";
       }
     } else if (
@@ -102,52 +103,52 @@ let postage = () => {
       country === "Poland" ||
       country === "Slovakia"
     ) {
-      if (weight < 1100) {
+      if (weight <= 1100) {
         post = "MINI";
-      } else if (weight >= 1100) {
+      } else if (weight > 1100) {
         post = "MAXI";
       }
     } else if (country === "Italy") {
-      if (weight < 100) {
+      if (weight <= 100) {
         post = "MINI";
-      } else if (weight >= 100) {
+      } else if (weight > 100) {
         post = "MAXI";
       }
     } else if (country === "Latvia") {
-      if (weight < 1200) {
+      if (weight <= 1200) {
         post = "MINI";
-      } else if (weight >= 1200) {
+      } else if (weight > 1200) {
         post = "MAXI";
       }
     } else if (country === "Lithuania") {
-      if (weight < 1500) {
+      if (weight <= 1500) {
         post = "MINI";
-      } else if (weight >= 1500) {
+      } else if (weight > 1500) {
         post = "MAXI";
       }
     } else if (country === "Singapore" || country === "Turkey") {
-      if (weight < 900) {
+      if (weight <= 900) {
         post = "MINI";
-      } else if (weight >= 900) {
+      } else if (weight > 900) {
         post = "MAXI";
       }
     } else if (country === "Spain") {
-      if (weight < 300) {
+      if (weight <= 300) {
         post = "MINI";
-      } else if (weight >= 300) {
-        post = "MAXI";
+      } else if (weight > 300) {
+        post = `MAXI - (UNLESS POSTCODE STARTS WITH '35', '38' or '51')`;
       }
     } else if (country === "Thailand") {
-      if (weight < 800) {
+      if (weight <= 800) {
         post = "MINI";
-      } else if (weight >= 800) {
+      } else if (weight > 800) {
         post = "MAXI";
       }
     } else if (country === "Canada") {
-      if (weight < 2000) {
+      if (weight <= 2000) {
         post = "MINI";
-      } else if (weight >= 2000) {
-        post = "MAXI - (UNLESS POSTCODE STARTS WITH '35', '38' or '51')";
+      } else if (weight > 2000) {
+        post = "MAXI";
       }
     } else if (country === "Belgium") {
       if (weight < 500) {
@@ -155,6 +156,8 @@ let postage = () => {
       } else if (weight >= 500) {
         post = "MAXI - (WEBSITE ORDERS DDU)";
       }
+    } else if (country === "Germany") {
+      post = "MAXI - (UNLESS ADDRESS INCLUDES PACKSTATION)";
     }
   }
   res.innerText = post;
