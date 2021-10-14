@@ -17,9 +17,11 @@
 }
 #main {
   margin: auto;
-  padding-top: 10px;
+  margin-top: 10px;
   background: rgb(133, 184, 235);
-  width: 500px;
+  width: fit-content;
+  padding: 5px;
+  max-width: 100%;
   border-radius: 10px;
   padding-bottom: 20vh;
 }
