@@ -23,10 +23,31 @@
   padding: 5px;
   max-width: 100%;
   border-radius: 10px;
-  padding-bottom: 20vh;
 }
 #header {
   text-align: center;
   font-size: xx-large;
   font-weight: 500;
+}
+#cheatflex {
+  margin-top: 10%;
+  font-size: smaller;
+  display: flex;
+  margin: auto;
+  margin-top: 5%;
+
+  width: 95%;
+  border: black solid 1px;
+}
+#cheat1 {
+  width: 33%;
+  margin-left: 10%;
+}
+#cheat2 {
+  width: 33%;
+  margin-left: 10%;
+}
+#cheat3 {
+  width: 33%;
+  margin-left: 10%;
 }
