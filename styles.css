@@ -31,13 +31,16 @@
 }
 #cheatflex {
   margin-top: 10%;
-  font-size: smaller;
+  font-size: medium;
   display: flex;
   margin: auto;
   margin-top: 5%;
-
-  width: 95%;
+  color: white;
+  background-color: rgb(59, 59, 59);
+  border-radius: 10px;
+  width: 70%;
   border: black solid 1px;
+  padding-bottom: 10px;
 }
 #cheat1 {
   width: 33%;
